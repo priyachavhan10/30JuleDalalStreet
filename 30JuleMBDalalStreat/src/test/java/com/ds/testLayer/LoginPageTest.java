@@ -3,6 +3,7 @@ package com.ds.testLayer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.ds.pageLayer.DashBoard;
 import com.ds.pageLayer.LoginPage;
 import com.ds.testBase.TestBase;
 
@@ -15,6 +16,12 @@ public class LoginPageTest extends TestBase {
 	{
 		String actual_url = login.getCURL();
 		Assert.assertEquals(actual_url, expected_url);
+	}
+	@Test
+	public void verifyDashBord()
+	{
+		DashBoard ds =new DashBoard();
+		ds.dashBoard();
 	}
 
 }
